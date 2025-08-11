@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSR Plan</title>
+  <link rel="stylesheet" href="CSS/common.css">
+  <link rel="icon" type="image/png" href="../Images/coficab_logo.png">
+  <script src="JS/load_all_regions.js"></script>
+</head>
+<body>
+  <!-- 🔵 Bannière -->
+  <header class="header">
+    <img src="../Images/white logo.png" alt="Coficab Logo" class="logo-left">
+
+    <div class="filter-bar-right">
+      <div class="dropdown">
+        <button class="dropbtn">Site ▼</button>
+        <div class="dropdown-content" id="site-filters"></div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Category ▼</button>
+        <div class="dropdown-content" id="category-filters"></div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Organization ▼</button>
+        <div class="dropdown-content" id="organization-filters"></div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Status ▼</button>
+        <div class="dropdown-content" id="status-filters"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ✅ Contenu -->
+  <main class="region-container">
+    <h2>CSR Plans</h2>
+
+    <!-- 📝 Tableau CSR -->
+    <div class="table-wrapper">
+    <table>
+        <thead>
+        <tr>
+            <th>COFICAB Entity</th>
+            <th>Category</th>
+            <th>Activity Type</th>
+            <th>Activity Description</th>
+            <th>Organization</th>
+            <th>External Entity</th>
+            <th>Cost (€)</th>
+            <th>Contract Type</th>
+            <th>Periodicity</th>
+            <th>Volunteers</th>
+            <th>Impact Value</th>
+            <th>Impact Unit</th>
+            <th>Impact Duration</th>
+            <th>Sustainability</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- future dynamic rows -->
+        </tbody>
+        <tbody id="csr-table-body">
+        <!-- Lignes injectées ici -->
+        </tbody>
+
+    </table>
+    </div>
+  </main>
+</body>
+</html>

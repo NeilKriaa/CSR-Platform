@@ -1,0 +1,7 @@
+const reports = JSON.parse(localStorage.getItem("csrReports") || "[]");
+
+reports.forEach(r => {
+	const div = document.createElement("div");
+	div.innerHTML = `<pre>${JSON.stringify(r, null, 2)}</pre>`;
+	document.body.appendChild(div);
+});

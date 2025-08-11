@@ -1,0 +1,158 @@
+body {
+	margin: 0;
+	font-family: "Segoe UI", sans-serif;
+	background-color: #ffffff;
+	position: relative;
+	min-height: 100vh;
+}
+
+/* 🌫️ Fond flou avec image */
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background-image: url("../Images/dechets_plage.png");
+	background-size: cover;
+	background-position: center;
+	filter: blur(4px);
+	opacity: 0.45;
+	z-index: -1;
+}
+
+/* 🔵 Bannière */
+.header {
+	background-color: #000168;
+	padding: 10px 30px;
+}
+
+.header img {
+	height: 50px;
+}
+
+/* ⬜ Bloc principal */
+.aps-container {
+	padding: 40px 30px;
+	max-width: 1200px;
+	margin: 30px auto;
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.aps-container h2 {
+	text-align: center;
+	color: #0a0a86;
+	margin-bottom: 30px;
+}
+
+.form-wrapper {
+	width: 100%;
+	overflow-x: auto;
+}
+
+/* On stylisera le tableau du formulaire juste après */
+#aps-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+#aps-table th, #aps-table td {
+	border: 1px solid #ccc;
+	padding: 8px;
+	text-align: center;
+}
+
+#aps-table th {
+	background-color: #e4f0f8;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#aps-table input, #aps-table textarea {
+	width: 100%;
+	padding: 6px;
+	border-radius: 4px;
+	border: 1px solid #aaa;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+#aps-table select {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 100%;
+	padding: 0 20px 0 0;
+	font-size: 14px;
+	cursor: pointer;
+	color: #333;
+	background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath fill='%230a0a86' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 8px center;
+	background-size: 12px;
+}
+
+#aps-table select:invalid {
+	color: #aaa; /* Grisé si aucune sélection */
+}
+
+#aps-table input,
+#aps-table textarea {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	width: 100%;
+	font-size: 14px;
+	padding: 4px;
+}
+
+
+textarea {
+	resize: vertical;
+}
+
+.form-buttons {
+	text-align: center;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.form-buttons button {
+	background-color: #3a4a9f;
+	color: white;
+	padding: 10px 18px;
+	border: none;
+	border-radius: 8px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.form-buttons button:hover {
+	background-color: #6375ce;
+}
+
+#aps-table th,
+#aps-table td {
+	min-width: 120px; /* ajuste selon besoin */
+	padding: 8px 12px;
+}
+
+
+#aps-table td {
+	word-wrap: break-word;
+	white-space: normal;
+}
+
+#aps-table textarea {
+	height: 60px;
+	resize: vertical;
+}
+
