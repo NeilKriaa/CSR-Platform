@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSR Reports</title>
+  <link rel="stylesheet" href="CSS/final_report.css">
+  <link rel="icon" type="image/png" href="Images/coficab_logo.png">
+  <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
+  <script src="JS/final_report.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔵 BANNIÈRE avec filtres centrés -->
+  <header class="header">
+    <img src="Images/white logo.png" alt="Coficab Logo" class="logo-left">
+
+        <div class="filter-bar-center">
+        <div class="dropdown">
+            <button class="dropbtn">Filter by Region ▼</button>
+            <div class="dropdown-content" id="region-filters">
+            <!-- Checkboxes dynamiques -->
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Filter by Country ▼</button>
+            <div class="dropdown-content" id="country-filters">
+            <!-- Checkboxes dynamiques -->
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Filter by Site ▼</button>
+            <div class="dropdown-content" id="site-filters">
+            <!-- Checkboxes dynamiques -->
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Filter by Category ▼</button>
+            <div class="dropdown-content" id="category-filters">
+            <!-- Checkboxes dynamiques -->
+            </div>
+        </div>
+        </div>
+
+  </header>
+
+  <!-- ✅ CONTENU -->
+  <main class="region-container">
+    <h2>CSR Reports</h2>
+
+    <div class="table-wrapper">
+        <table>
+        <thead>
+            <tr>
+            <th>Region</th>
+            <th>Country</th>
+            <th>COFICAB Site</th>
+            <th>Activity Title</th>
+            <th>Category</th>
+            <th>Nature of Collaboration</th>
+            <th>Start Year</th>
+            <th>Edition</th>
+            <th>Internal Participants</th>
+            <th>% of Employees</th>
+            <th>Estimated Budget (€)</th>
+            <th>Actual Budget (€)</th>
+            <th>Action Impact Number</th>
+            <th>Impact Unit</th>
+            <th>Organizer</th>
+            <th>External Partner</th>
+            <th>Number of External Partners</th>
+            <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody id="csr-table-body">
+            <!-- Lignes injectées dynamiquement -->
+        </tbody>
+        </table>
+
+        <button id="export-excel" class="action-button">Download in Excel format</button>
+
+    </div>
+  </main>
+
+
+</body>
+</html>

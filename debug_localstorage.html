@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LocalStorage Debug</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    pre {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 20px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h2>📦 Contenu de localStorage["csrPlans"]</h2>
+  <pre id="output">Loading...</pre>
+
+  <script>
+    const data = localStorage.getItem("csrPlans");
+    const parsed = data ? JSON.parse(data) : [];
+    document.getElementById("output").textContent = JSON.stringify(parsed, null, 2);
+  </script>
+</body>
+</html>

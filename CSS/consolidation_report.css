@@ -1,0 +1,109 @@
+/* 🔧 Base */
+body {
+	margin: 0;
+	font-family: "Segoe UI", sans-serif;
+	background-color: #ffffff;
+	min-height: 100vh;
+	position: relative;
+}
+
+/* 🌫️ Fond flou */
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background-image: url("../Images/plant grow.png");
+	background-size: cover;
+	background-position: center;
+	filter: blur(4px);
+	opacity: 0.45;
+	z-index: -1;
+}
+
+/* 🔵 Bannière */
+.header {
+	background-color: #000168;
+	padding: 10px 30px;
+}
+.header img {
+	height: 50px;
+}
+
+/* 📦 Encadré principal */
+.consolidation-container {
+	max-width: 1100px;
+	margin: 40px auto;
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	padding: 40px 30px;
+	text-align: center;
+}
+
+.consolidation-container h2 {
+	color: #000168;
+	margin-bottom: 10px;
+}
+
+.status-info {
+	color: #333;
+	margin-bottom: 30px;
+	font-size: 16px;
+}
+
+/* 🗺️ Boutons régionaux */
+.region-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 25px;
+	margin-top: 30px;
+}
+
+.region-card {
+	position: relative;
+	width: 220px;
+	height: 140px;
+	border-radius: 12px;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.region-card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+
+/* Flou léger sur image */
+.region-blur {
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center;
+	filter: blur(2px);
+	transform: scale(1.05);
+	z-index: 0;
+}
+
+/* Texte lisible sur image */
+.region-label {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #000168;
+	font-size: 20px;
+	font-weight: bold;
+	z-index: 1;
+	pointer-events: none;
+	background-color: rgba(255, 255, 255, 0.35);
+	backdrop-filter: blur(2px);
+	border-radius: 6px;
+	padding: 6px 12px;
+}
